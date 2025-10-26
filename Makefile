@@ -1,5 +1,5 @@
 NAME = libftprintf.a
-MY_SOURCES = ft_putchar.c ft_putstr.c
+MY_SOURCES = ft_printf.c ft_putchar.c ft_putstr.c
 
 MY_OBJECTS = $(MY_SOURCES:.c=.o)
 CFLAGS += -Wall -Wextra -Werror
