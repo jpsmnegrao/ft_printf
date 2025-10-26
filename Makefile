@@ -1,19 +1,21 @@
 NAME = libftprintf.a
-MY_SOURCES = ft_printf.c ft_putchar.c ft_putstr.c
 
-MY_OBJECTS = $(MY_SOURCES:.c=.o)
+SRCS = ft_printf.c ft_putchar.c ft_putstr.c
+OBJS = $(SRCS:.c=.o)
+
+CC = cc
 CFLAGS += -Wall -Wextra -Werror
-
-$(NAME): $(MY_OBJECTS)
-	ar rcs $(NAME) $(MY_OBJECTS)
-
-%.o: %.c
-	cc $(CFLAGS) -c $< -o $@
 
 all: $(NAME)
 
+$(NAME): $(OBJS)
+	ar rcs $(NAME) $(OBJS)
+
+%.o: %.c
+	$(CC) $(CFLAGS) -c $< -o $@
+
 clean:
-	rm -f $(MY_OBJECTS)
+	rm -f $(OBJS)
 
 fclean: clean
 	rm -f $(NAME)
@@ -21,4 +23,4 @@ fclean: clean
 re: fclean $(NAME)
 
 .PHONY:
-	all clean fclean re bonus
+	all clean fclean re

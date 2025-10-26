@@ -6,7 +6,13 @@
 /*   By: jpaim-so <jpaim-so@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/24 22:20:09 by jpaim-so          #+#    #+#             */
-/*   Updated: 2025/10/24 22:20:10 by jpaim-so         ###   ########.fr       */
+/*   Updated: 2025/10/26 18:02:32 by jpaim-so         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+# include "ft_printf.h"
+
+int	ft_printf(const char *format, ...)
+{
+	return (0);
+}
