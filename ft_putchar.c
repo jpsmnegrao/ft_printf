@@ -6,11 +6,11 @@
 /*   By: jpaim-so <jpaim-so@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/24 22:16:16 by jpaim-so          #+#    #+#             */
-/*   Updated: 2025/10/24 22:19:00 by jpaim-so         ###   ########.fr       */
+/*   Updated: 2025/10/27 16:54:44 by jpaim-so         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libftprintf.h"
+# include "ft_printf.h"
 
 void	ft_putchar(char c)
 {
