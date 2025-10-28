@@ -6,7 +6,7 @@
 /*   By: jpaim-so <jpaim-so@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/24 22:17:15 by jpaim-so          #+#    #+#             */
-/*   Updated: 2025/10/28 17:16:58 by jpaim-so         ###   ########.fr       */
+/*   Updated: 2025/10/28 18:12:32 by jpaim-so         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,5 @@
 # include <stdarg.h>
 
 int		ft_printf(const char *format, ...);
-void	ft_putchar(char c);
-void	ft_putstr(char *str);
 
 #endif
