@@ -1,10 +1,12 @@
 NAME = libftprintf.a
 
-SRCS = ft_printf.c ft_putchar.c ft_putstr.c
+SRCS = ft_printf.c
 OBJS = $(SRCS:.c=.o)
+LIBFT = libft.a
+LIBFT_PATH = ./libft
 
 CC = cc
-CFLAGS += -Wall -Wextra -Werror
+CFLAGS += -Wall -Wextra -Werror -I./libft/ -L./libft/bin/ -lft
 
 all: $(NAME)
 
@@ -21,6 +23,9 @@ fclean: clean
 	rm -f $(NAME)
 
 re: fclean $(NAME)
+
+libft:
+	make -C libft/
 
 .PHONY:
 	all clean fclean re

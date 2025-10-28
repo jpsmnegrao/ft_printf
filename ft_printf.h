@@ -6,13 +6,14 @@
 /*   By: jpaim-so <jpaim-so@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/24 22:17:15 by jpaim-so          #+#    #+#             */
-/*   Updated: 2025/10/27 21:10:22 by jpaim-so         ###   ########.fr       */
+/*   Updated: 2025/10/28 16:47:54 by jpaim-so         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef FT_PRINTF_H
 # define FT_PRINTF_H
 
+# include "../libft/libft.h"
 # include <unistd.h>
 # include <stdarg.h>
 

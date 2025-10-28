@@ -6,7 +6,7 @@
 /*   By: jpaim-so <jpaim-so@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/24 22:20:09 by jpaim-so          #+#    #+#             */
-/*   Updated: 2025/10/27 21:54:37 by jpaim-so         ###   ########.fr       */
+/*   Updated: 2025/10/28 16:44:18 by jpaim-so         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,9 +31,9 @@ int	ft_printf(const char *format, ...)
 	return (0);
 }
 
-int main()
-{
-	int result = printf("Sentence to know how many %s\n", "characters were written");
+// int main()
+// {
+// 	int result = printf("Sentence to know how many %s\n", "characters were written");
 	
-	printf("%d characters were written", result);
-}
+// 	printf("%d characters were written", result);
+// }
