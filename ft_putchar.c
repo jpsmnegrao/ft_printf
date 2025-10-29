@@ -1,19 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isascii.c                                       :+:      :+:    :+:   */
+/*   ft_putchar.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jpaim-so <jpaim-so@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/13 13:57:59 by jpaim-so          #+#    #+#             */
-/*   Updated: 2025/10/15 16:51:47 by jpaim-so         ###   ########.fr       */
+/*   Created: 2025/10/28 18:29:47 by jpaim-so          #+#    #+#             */
+/*   Updated: 2025/10/29 17:01:10 by jpaim-so         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isascii(int c)
+#include "ft_printf.h"
+
+int	ft_putchar(int c, size_t *counter)
 {
-	if (c >= 0 && c < 128)
-		return (1);
-	else
-		return (0);
+	write(1, &c, 1);
+	counter++;
+	return(c);
 }

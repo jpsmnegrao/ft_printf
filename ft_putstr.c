@@ -1,38 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_atoi.c                                          :+:      :+:    :+:   */
+/*   ft_putstr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jpaim-so <jpaim-so@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/16 22:47:36 by jpaim-so          #+#    #+#             */
-/*   Updated: 2025/10/22 17:01:02 by jpaim-so         ###   ########.fr       */
+/*   Created: 2025/10/29 17:37:14 by jpaim-so          #+#    #+#             */
+/*   Updated: 2025/10/29 17:51:44 by jpaim-so         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_atoi(const char *str)
+#include "ft_printf.h"
+
+int	ft_putstr(char *str, size_t *counter)
 {
 	int	i;
-	int	symb;
-	int	result;
 
 	i = 0;
-	symb = 1;
-	result = 0;
-	while ((str[i] >= 9 && str[i] <= 13) || str[i] == 32)
-		i++;
-	if (str[i] == '+' || str[i] == '-')
+	while (str[i])
 	{
-		if (str[i] == '-')
-			symb = -symb;
+		write(1, &str[i], 1);
 		i++;
+		counter++;
 	}
-	if (((str[i] >= 65 && str[i] <= 90) || (str[i] >= 97 && str[i] <= 122)))
-		return (0);
-	while (str[i] >= '0' && str[i] <= '9')
-	{
-		result = result * 10 + (str[i] - '0');
-		i++;
-	}
-	return (symb * result);
+	return (i);
 }

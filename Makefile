@@ -1,21 +1,14 @@
 NAME = libftprintf.a
 
-SRCS = ft_printf.c format_converter.c
+SRCS = ft_printf.c format_converter.c ft_putchar.c ft_putstr.c
 OBJS = $(SRCS:.c=.o)
 
-LIBFT_NAME = libft.a
-LIBFT_PATH = ./libft
-
 CC = cc
-CFLAGS = -Wall -Wextra -Werror -I$(LIBFT_PATH) 
+CFLAGS = -Wall -Wextra -Werror
 
-all: libft $(NAME)
+all: $(NAME)
 
-libft:
-	@echo "Building libft..."
-	make -C $(LIBFT_PATH)
-
-$(NAME): libft $(OBJS)
+$(NAME):  $(OBJS)
 	ar rcs $(NAME) $(OBJS)
 
 %.o: %.c
@@ -23,13 +16,11 @@ $(NAME): libft $(OBJS)
 
 clean:
 	rm -f $(OBJS)
-	make -C $(LIBFT_PATH) clean
 
 fclean: clean
 	rm -f $(NAME)
-	make -C $(LIBFT_PATH) fclean
 
 re: fclean $(NAME)
 
 .PHONY:
-	all clean fclean re libft
+	all clean fclean re
