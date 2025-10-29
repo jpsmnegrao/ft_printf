@@ -6,7 +6,7 @@
 /*   By: jpaim-so <jpaim-so@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/28 18:29:47 by jpaim-so          #+#    #+#             */
-/*   Updated: 2025/10/29 17:01:10 by jpaim-so         ###   ########.fr       */
+/*   Updated: 2025/10/29 22:01:48 by jpaim-so         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int	ft_putchar(int c, size_t *counter)
 {
-	write(1, &c, 1);
 	counter++;
-	return(c);
+	write(1, &c, 1);
+	return (c);
 }
