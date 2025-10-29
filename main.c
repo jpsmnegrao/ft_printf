@@ -6,7 +6,7 @@
 /*   By: jpaim-so <jpaim-so@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/28 17:19:46 by jpaim-so          #+#    #+#             */
-/*   Updated: 2025/10/29 17:40:19 by jpaim-so         ###   ########.fr       */
+/*   Updated: 2025/10/29 18:16:55 by jpaim-so         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,14 +31,24 @@ int	main(void)
 	e = '\t';
 	str = "Mambo Jambo";
 	printf("\n -----> Standard printf <-----\nTesting ft_printf\n");
+	fflush(stdout);
 	ft_printf("\n -----> 42 ft_printf <----- \nTesting ft_printf\n");
-	printf("\n -----> Standard printf with a char <-----\nTesting - %c\n", c);
-	ft_printf("\n -----> 42 ft_printf with a char <----- \nTesting - %c\n", c);
-	printf("\n -----> Standard printf with chars (a, line break, a)  <-----\nTesting - %c %c %c\n", c, d, c);
+	fflush(stdout);
+	printf("\n -----> Standard printf with a char (a) <-----\nTesting - %c\n", c);
+	fflush(stdout);
+	ft_printf("\n -----> 42 ft_printf with a char (a) <----- \nTesting - %c\n", c);
+	fflush(stdout);
+	printf("\n -----> Standard printf with chars (a, line break, a) <-----\nTesting - %c %c %c\n", c, d, c);
+	fflush(stdout);
 	ft_printf("\n -----> 42 ft_printf with chars (a, line break, a) <----- \nTesting - %c %c %c\n", c, d, c);
+	fflush(stdout);
 	printf("\n -----> Standard printf with chars (a, tab, a) <-----\nTesting - %c %c %c\n", c, e, c);
+	fflush(stdout);
 	ft_printf("\n -----> 42 ft_printf with chars (a, tab, a) <----- \nTesting - %c %c %c\n", c, e, c);
+	fflush(stdout);
 	printf("\n -----> Standard printf with a string <-----\nTesting - %s\n", str);
+	fflush(stdout);
 	ft_printf("\n -----> 42 ft_printf with a string <----- \nTesting - %s\n", str);
+	fflush(stdout);
 	return (0);
 }
