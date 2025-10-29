@@ -6,7 +6,7 @@
 /*   By: jpaim-so <jpaim-so@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/28 17:19:46 by jpaim-so          #+#    #+#             */
-/*   Updated: 2025/10/29 18:16:55 by jpaim-so         ###   ########.fr       */
+/*   Updated: 2025/10/29 18:57:11 by jpaim-so         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,6 +49,10 @@ int	main(void)
 	printf("\n -----> Standard printf with a string <-----\nTesting - %s\n", str);
 	fflush(stdout);
 	ft_printf("\n -----> 42 ft_printf with a string <----- \nTesting - %s\n", str);
+	fflush(stdout);
+	printf("\n -----> Standard printf with a char and a string <-----\nTesting - %c and %s\n", c, str);
+	fflush(stdout);
+	ft_printf("\n -----> 42 ft_printf with a char and a string <----- \nTesting - %c and %s\n", c, str);
 	fflush(stdout);
 	return (0);
 }
