@@ -6,7 +6,7 @@
 /*   By: jpaim-so <jpaim-so@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/28 18:27:33 by jpaim-so          #+#    #+#             */
-/*   Updated: 2025/10/29 22:21:20 by jpaim-so         ###   ########.fr       */
+/*   Updated: 2025/10/29 22:42:32 by jpaim-so         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,8 @@ void	format_converter(char data_type, va_list args, size_t *counter)
 		ft_puthexa(va_arg(args, int), counter, 0);
 	else if (data_type == 'X')
 		ft_puthexa(va_arg(args, int), counter, 1);
+	else if (data_type == '%')
+		len += write(1, &data_type, 1);
 	else
 		len += write(1, &data_type, 1);
 }
