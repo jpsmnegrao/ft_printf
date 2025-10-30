@@ -6,7 +6,7 @@
 /*   By: jpaim-so <jpaim-so@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/29 21:54:02 by jpaim-so          #+#    #+#             */
-/*   Updated: 2025/10/29 21:59:38 by jpaim-so         ###   ########.fr       */
+/*   Updated: 2025/10/30 01:40:57 by jpaim-so         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,11 @@ int	ft_putptraddress(void *ptr, size_t *counter)
 	unsigned long	n;
 
 	if (ptr == NULL)
-		return (ft_printf("(nil)"));
+	{
+		write(1, "(nil)", 5);
+		(*counter) += 5;
+		return (*counter);
+	}
 	n = (unsigned long) ptr;
 	write(1, "0x", 2);
 	*counter += 2;

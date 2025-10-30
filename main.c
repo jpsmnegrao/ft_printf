@@ -6,11 +6,11 @@
 /*   By: jpaim-so <jpaim-so@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/28 17:19:46 by jpaim-so          #+#    #+#             */
-/*   Updated: 2025/10/29 22:23:23 by jpaim-so         ###   ########.fr       */
+/*   Updated: 2025/10/30 01:00:56 by jpaim-so         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-// gcc -Ilibft -Ift_printf main.c libftprintf.a && ./a.out
+// gcc -Ift_printf main.c libftprintf.a && ./a.out
 // gcc -Ilibft -Ift_printf main.c libftprintf.a ./libft/libft.a -o test && ./test
 
 
@@ -36,7 +36,7 @@ int	main(void)
 	str = "Mambo Jambo";
 	ptr = &n;
 	null_ptr = NULL;
-	printf("\n -----> Standard printf <-----\nTesting ft_printf\n");
+/*	printf("\n -----> Standard printf <-----\nTesting ft_printf\n");
 	fflush(stdout);
 	ft_printf("\n -----> 42 ft_printf <----- \nTesting ft_printf\n");
 	fflush(stdout);
@@ -71,8 +71,6 @@ int	main(void)
 	ft_printf("\n -----> 42 ft_printf with a number in hexadecimal (base 16) uppercase <----- \nTesting - %X \n", num);
 	fflush(stdout);
 	
-
-	// Test with a valid pointer
 	printf("\n-----> Standard printf with a pointer <-----\n");
 	printf("Pointer address: %p\n", ptr);
 	fflush(stdout);
@@ -80,15 +78,13 @@ int	main(void)
 	ft_printf("Pointer address: %p\n", ptr);
 	fflush(stdout);
 
-	// Test with NULL pointer
 	printf("\n-----> Standard printf with a NULL pointer <-----\n");
 	printf("Pointer address: %p\n", null_ptr);
 	fflush(stdout);
 	ft_printf("\n-----> 42 ft_printf with a NULL pointer <-----\n");
 	ft_printf("Pointer address: %p\n", null_ptr);
 	fflush(stdout);
-	
-	// Testing lowercase hexadecimal %x
+
 	printf("\n -----> Standard printf with a char in hexadecimal (base 16) lowercase <-----\n");
 	printf("Testing - %x\n", n);
 	fflush(stdout);
@@ -96,7 +92,6 @@ int	main(void)
 	ft_printf("Testing - %x\n", n);
 	fflush(stdout);
 
-	// Testing uppercase hexadecimal %X
 	printf("\n -----> Standard printf with a number in hexadecimal (base 16) uppercase <-----\n");
 	printf("Testing - %c and %s and 0x%X\n", c, str, num);
 	fflush(stdout);
@@ -106,30 +101,77 @@ int	main(void)
 
 
 
-	// printf("\n -----> Standard printf TEST 1 with char '0' <-----\nTesting - %c\n", '0');
-	// fflush(stdout);
-	// ft_printf("\n -----> 42 ft_printf TEST 1 with char '0' <----- \nTesting - %c\n", '0');
-	// fflush(stdout);
-	// printf("\n -----> Standard printf TEST 2 with chars '0', 0, '1' <-----\nTesting - %c %c %c\n", '0', 0, '1');
-	// fflush(stdout);
-	// ft_printf("\n -----> 42 ft_printf TEST 2 with chars '0', 0, '1' <----- \nTesting - %c %c %c\n", '0', 0, '1');
-	// fflush(stdout);
-	// printf("\n -----> Standard printf TEST 3 with char '0' - 256 <-----\nTesting - %c\n", '0' - 256);
-	// fflush(stdout);
-	// ft_printf("\n -----> 42 ft_printf TEST 3 with char '0' - 256 <----- \nTesting - %c\n", '0' - 256);
-	// fflush(stdout);
+	printf("\n -----> Standard printf TEST 1 with char '0' <-----\nTesting - %c\n", '0');
+	fflush(stdout);
+	ft_printf("\n -----> 42 ft_printf TEST 1 with char '0' <----- \nTesting - %c\n", '0');
+	fflush(stdout);
+	printf("\n -----> Standard printf TEST 2 with chars '0', 0, '1' <-----\nTesting - %c %c %c\n", '0', 0, '1');
+	fflush(stdout);
+	ft_printf("\n -----> 42 ft_printf TEST 2 with chars '0', 0, '1' <----- \nTesting - %c %c %c\n", '0', 0, '1');
+	fflush(stdout);
+	printf("\n -----> Standard printf TEST 3 with char '0' - 256 <-----\nTesting - %c\n", '0' - 256);
+	fflush(stdout);
+	ft_printf("\n -----> 42 ft_printf TEST 3 with char '0' - 256 <----- \nTesting - %c\n", '0' - 256);
+	fflush(stdout);
 
-	// printf("\n -----> Standard printf TEST 1 with string \"-\" <-----\nTesting - %s\n", "-");
-	// fflush(stdout);
-	// ft_printf("\n -----> 42 ft_printf TEST 1 with string \"-\" <----- \nTesting - %s\n", "-");
-	// fflush(stdout);
-	// printf("\n -----> Standard printf TEST 2 with strings \"\", \"-\" <-----\nTesting - %s %s\n", "", "-");
-	// fflush(stdout);
-	// ft_printf("\n -----> 42 ft_printf TEST 2 with strings \"\", \"-\" <----- \nTesting - %s %s\n", "", "-");
-	// fflush(stdout);
-	// printf("\n -----> Standard printf TEST 3 with NULL string <-----\nTesting - NULL %s NULL\n", NULL);
-	// fflush(stdout);
-	// ft_printf("\n -----> 42 ft_printf TEST 3 with NULL string <----- \nTesting - NULL %s NULL\n", NULL);
-	// fflush(stdout);
+	printf("\n -----> Standard printf TEST 1 with string \"-\" <-----\nTesting - %s\n", "-");
+	fflush(stdout);
+	ft_printf("\n -----> 42 ft_printf TEST 1 with string \"-\" <----- \nTesting - %s\n", "-");
+	fflush(stdout);
+	printf("\n -----> Standard printf TEST 2 with strings \"\", \"-\" <-----\nTesting - %s %s\n", "", "-");
+	fflush(stdout);
+	ft_printf("\n -----> 42 ft_printf TEST 2 with strings \"\", \"-\" <----- \nTesting - %s %s\n", "", "-");
+	fflush(stdout);
+	printf("\n -----> Standard printf TEST 3 with NULL string <-----\nTesting - NULL %s NULL\n", NULL);
+	fflush(stdout);
+	ft_printf("\n -----> 42 ft_printf TEST 3 with NULL string <----- \nTesting - NULL %s NULL\n", NULL);
+	fflush(stdout);*/
+
+	printf("\n-----> Standard printf TEST 1 <-----\nTesting - %c\n", '0');
+	fflush(stdout);
+	ft_printf("\n-----> ft_printf TEST 1 <-----\nTesting - %c\n", '0');
+	fflush(stdout);
+
+	printf("\n-----> Standard printf TEST 2 <-----\nTesting -  %c \n", '0');
+	fflush(stdout);
+	ft_printf("\n-----> ft_printf TEST 2 <-----\nTesting -  %c \n", '0');
+	fflush(stdout);
+
+	printf("\n-----> Standard printf TEST 3 <-----\nTesting -  %c\n", '0' - 256);
+	fflush(stdout);
+	ft_printf("\n-----> ft_printf TEST 3 <-----\nTesting -  %c\n", '0' - 256);
+	fflush(stdout);
+
+	printf("\n-----> Standard printf TEST 4 <-----\nTesting - %c \n", '0' + 256);
+	fflush(stdout);
+	ft_printf("\n-----> ft_printf TEST 4 <-----\nTesting - %c \n", '0' + 256);
+	fflush(stdout);
+
+	printf("\n-----> Standard printf TEST 5 <-----\nTesting -  %c %c %c \n", '0', 0, '1');
+	fflush(stdout);
+	ft_printf("\n-----> ft_printf TEST 5 <-----\nTesting -  %c %c %c \n", '0', 0, '1');
+	fflush(stdout);
+
+	printf("\n-----> Standard printf TEST 6 <-----\nTesting -  %c %c %c \n", ' ', ' ', ' ');
+	fflush(stdout);
+	ft_printf("\n-----> ft_printf TEST 6 <-----\nTesting -  %c %c %c \n", ' ', ' ', ' ');
+	fflush(stdout);
+
+	printf("\n-----> Standard printf TEST 7 <-----\nTesting -  %c %c %c \n", '1', '2', '3');
+	fflush(stdout);
+	ft_printf("\n-----> ft_printf TEST 7 <-----\nTesting -  %c %c %c \n", '1', '2', '3');
+	fflush(stdout);
+
+	printf("\n-----> Standard printf TEST 8 <-----\nTesting -  %c %c %c \n", '2', '1', 0);
+	fflush(stdout);
+	ft_printf("\n-----> ft_printf TEST 8 <-----\nTesting -  %c %c %c \n", '2', '1', 0);
+	fflush(stdout);
+
+	printf("\n-----> Standard printf TEST 9 <-----\nTesting -  %c %c %c \n", 0, '1', '2');
+	fflush(stdout);
+	ft_printf("\n-----> ft_printf TEST 9 <-----\nTesting -  %c %c %c \n", 0, '1', '2');
+	fflush(stdout);
+
+
 	return (0);
 }

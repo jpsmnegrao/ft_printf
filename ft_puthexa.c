@@ -6,7 +6,7 @@
 /*   By: jpaim-so <jpaim-so@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/29 19:46:42 by jpaim-so          #+#    #+#             */
-/*   Updated: 2025/10/29 22:20:04 by jpaim-so         ###   ########.fr       */
+/*   Updated: 2025/10/30 01:46:33 by jpaim-so         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,8 +30,11 @@ int	ft_puthexa(unsigned int num, size_t *counter, int caps)
 {
 	unsigned long	n;
 
-	if (num == 0)
-		return (ft_printf("(nil)"));
+	if (num == '0')
+	{
+		write(1, "0", 1);
+		return ((*counter) + 1);
+	}
 	n = (unsigned long) num;
 	ft_print_hexa_recursive(n, counter, caps);
 	return (*counter);

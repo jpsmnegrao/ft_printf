@@ -6,7 +6,7 @@
 /*   By: jpaim-so <jpaim-so@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/28 18:27:33 by jpaim-so          #+#    #+#             */
-/*   Updated: 2025/10/29 22:42:32 by jpaim-so         ###   ########.fr       */
+/*   Updated: 2025/10/30 01:35:48 by jpaim-so         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,12 @@
 
 void	format_converter(char data_type, va_list args, size_t *counter)
 {
-	int	len;
-
-	len = 0;
-	if (data_type == 'c')
+	if (data_type == '%')
+	{
+		write(1, "%", 1);
+		(*counter)++;
+	}
+	else if (data_type == 'c')
 		ft_putchar(va_arg(args, int), counter);
 	else if (data_type == 's')
 		ft_putstr(va_arg(args, char *), counter);
@@ -27,10 +29,11 @@ void	format_converter(char data_type, va_list args, size_t *counter)
 		ft_puthexa(va_arg(args, int), counter, 0);
 	else if (data_type == 'X')
 		ft_puthexa(va_arg(args, int), counter, 1);
-	else if (data_type == '%')
-		len += write(1, &data_type, 1);
 	else
-		len += write(1, &data_type, 1);
+	{
+		write(1, &data_type, 1);
+		(*counter)++;
+	}
 }
 
 /*	else if (data_type == 'd')
