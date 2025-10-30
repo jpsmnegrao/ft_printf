@@ -6,15 +6,16 @@
 /*   By: jpaim-so <jpaim-so@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/28 17:19:46 by jpaim-so          #+#    #+#             */
-/*   Updated: 2025/10/30 01:00:56 by jpaim-so         ###   ########.fr       */
+/*   Updated: 2025/10/30 18:42:13 by jpaim-so         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-// gcc -Ift_printf main.c libftprintf.a && ./a.out
-// gcc -Ilibft -Ift_printf main.c libftprintf.a ./libft/libft.a -o test && ./test
+// cc -Ift_printf main.c libftprintf.a && ./a.out
+// cc -Ilibft -Ift_printf main.c libftprintf.a ./libft/libft.a -o test && ./test
 
 
 #include <stdio.h>
+#include "limits.h"
 #include "ft_printf.h"
 
 int	main(void)
@@ -125,7 +126,7 @@ int	main(void)
 	printf("\n -----> Standard printf TEST 3 with NULL string <-----\nTesting - NULL %s NULL\n", NULL);
 	fflush(stdout);
 	ft_printf("\n -----> 42 ft_printf TEST 3 with NULL string <----- \nTesting - NULL %s NULL\n", NULL);
-	fflush(stdout);*/
+	fflush(stdout);
 
 	printf("\n-----> Standard printf TEST 1 <-----\nTesting - %c\n", '0');
 	fflush(stdout);
@@ -170,8 +171,57 @@ int	main(void)
 	printf("\n-----> Standard printf TEST 9 <-----\nTesting -  %c %c %c \n", 0, '1', '2');
 	fflush(stdout);
 	ft_printf("\n-----> ft_printf TEST 9 <-----\nTesting -  %c %c %c \n", 0, '1', '2');
+	fflush(stdout);*/
+
+	printf("\n-----> Standard printf int <-----\nTesting - %d\n", n);
+	fflush(stdout);
+	ft_printf("\n-----> ft_printf int <-----\nTesting - %d\n", n);
 	fflush(stdout);
 
+	printf("\n-----> Standard printf int <-----\nTesting - %d\n", c);
+	fflush(stdout);
+	ft_printf("\n-----> ft_printf int <-----\nTesting - %d\n", c);
+	fflush(stdout);
+
+	printf("\n-----> Standard printf int <-----\nTesting - %d\n", -1231231);
+	fflush(stdout);
+	ft_printf("\n-----> ft_printf int <-----\nTesting - %d\n", -1231231);
+	fflush(stdout);
+
+	printf("\n-----> Standard printf int <-----\nTesting - %d\n", 2147483648);
+	fflush(stdout);
+	ft_printf("\n-----> ft_printf int <-----\nTesting - %d\n", 2147483648);
+	fflush(stdout);
+
+	printf("\n-----> Standard printf int <-----\nTesting - %d\n", 2147483647);
+	fflush(stdout);
+	ft_printf("\n-----> ft_printf int <-----\nTesting - %d\n", 2147483647);
+	fflush(stdout);
+	
+	printf("\n-----> Standard printf int <-----\nTesting - %d\n", -2147483648);
+	fflush(stdout);
+	ft_printf("\n-----> ft_printf int <-----\nTesting - %d\n", -2147483648);
+	fflush(stdout);
+
+	printf(" \n%i %i %i %i %i %i %i \n", INT_MAX, INT_MIN, LONG_MAX, LONG_MIN, ULONG_MAX, 0, -42);
+	fflush(stdout);
+	ft_printf(" \n%i %i %i %i %i %i %i \n", INT_MAX, INT_MIN, LONG_MAX, LONG_MIN, ULONG_MAX, 0, -42);
+	fflush(stdout);
+
+	printf("\n-----> Standard printf int III <-----\nTesting - %i\n", -1231231);
+	fflush(stdout);
+	ft_printf("\n-----> ft_printf int III <-----\nTesting - %i\n", -1231231);
+	fflush(stdout);
+
+	printf("\n-----> Standard printf int UUU <-----\nTesting - %u\n", -1231231);
+	fflush(stdout);
+	ft_printf("\n-----> ft_printf int UUU <-----\nTesting - %u\n", -1231231);
+	fflush(stdout);
+	
+	printf("\n-----> Standard printf int UUU <-----\nTesting - %u\n", -1231231);
+	fflush(stdout);
+	ft_printf("\n-----> ft_printf int UUU <-----\nTesting - %u\n", -1231231);
+	fflush(stdout);
 
 	return (0);
 }

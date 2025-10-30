@@ -6,7 +6,7 @@
 /*   By: jpaim-so <jpaim-so@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/24 22:17:15 by jpaim-so          #+#    #+#             */
-/*   Updated: 2025/10/29 22:20:25 by jpaim-so         ###   ########.fr       */
+/*   Updated: 2025/10/30 18:38:30 by jpaim-so         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,5 +22,7 @@ int		ft_putchar(int c, size_t *counter);
 int		ft_putstr(char *str, size_t *counter);
 int		ft_putptraddress(void *ptr, size_t *counter);
 int		ft_puthexa(unsigned int num, size_t *counter, int caps);
+int		ft_putnbr(int n, size_t *counter);
+int		ft_putunsnbr(unsigned int n, size_t *counter);
 
 #endif
