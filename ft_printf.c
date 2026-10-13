@@ -6,7 +6,7 @@
 /*   By: jpaim-so <jpaim-so@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/24 22:20:09 by jpaim-so          #+#    #+#             */
-/*   Updated: 2025/10/30 01:41:41 by jpaim-so         ###   ########.fr       */
+/*   Updated: 2025/10/31 14:50:26 by jpaim-so         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,8 @@ int	ft_printf(const char *format, ...)
 
 	len = 0;
 	va_start(args, format);
+	if (!format)
+		return (-1);
 	while (*format != '\0')
 	{
 		if (*format == '%')

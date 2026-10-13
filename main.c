@@ -6,7 +6,7 @@
 /*   By: jpaim-so <jpaim-so@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/28 17:19:46 by jpaim-so          #+#    #+#             */
-/*   Updated: 2025/10/30 19:25:26 by jpaim-so         ###   ########.fr       */
+/*   Updated: 2025/10/31 16:33:02 by jpaim-so         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,6 +35,18 @@ int	main(void)
 	str = "Mambo Jambo";
 	ptr = &n;
 	null_ptr = NULL;
+	printf("mambo\n\n");
+	fflush(stdout);
+	ft_printf("mambo\n\n");
+	fflush(stdout);
+	printf(NULL);
+	fflush(stdout);
+	ft_printf(NULL);
+	fflush(stdout);
+	printf("jambo\n");
+	fflush(stdout);
+	ft_printf("jambo\n");
+	fflush(stdout);
 	printf("\n -----> Standard printf <-----\nTesting ft_printf\n");
 	fflush(stdout);
 	ft_printf("\n -----> 42 ft_printf <----- \nTesting ft_printf\n");
