@@ -6,9 +6,11 @@
 /*   By: jpaim-so <jpaim-so@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/28 17:19:46 by jpaim-so          #+#    #+#             */
-/*   Updated: 2025/10/31 16:33:02 by jpaim-so         ###   ########.fr       */
+/*   Updated: 2026/10/13 18:38:01 by jpaim-so         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+// file for demo purposes, it was not part of the project submission
 
 // cc -Ift_printf main.c libftprintf.a && ./a.out
 
